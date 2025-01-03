@@ -43,6 +43,7 @@ public class CartServiceImpl implements CartService {
 		if(cartItems.size()>0) {
 			for(CartItem ci:cartItems) {
 				if(ci.getProductId()==productId) {
+					incrementItemFromCart(ci.getCart().getCartId(), ci.getCartItemId());
 					return cart;
 				}
 			}

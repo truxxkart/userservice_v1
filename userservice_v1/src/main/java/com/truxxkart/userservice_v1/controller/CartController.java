@@ -19,7 +19,7 @@ public class CartController {
     private CartServiceImpl cartService;
 
     @GetMapping
-    public Cart getCart(@RequestParam(required = false) Long userId) {
+    public Cart getCart(@RequestParam Long userId) {
         return cartService.getOrCreateCart(userId);
     }
     
